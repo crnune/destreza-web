@@ -50,7 +50,6 @@ body {
     width: 70px;
     height: auto;
 }
-
 /* =========================
    NAVBAR
 ========================= */
@@ -75,7 +74,6 @@ body {
 .nav a:hover {
     background: #1e90ff;
 }
-
 /* =========================
    HERO (INICIO)
 ========================= */
@@ -105,7 +103,6 @@ body {
     font-size: 1.2rem;
     margin-top: 5px;
 }
-
 /* =========================
    SECCIONES GENERALES
 ========================= */
@@ -119,7 +116,6 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
-
 /* =========================
    GRID JUGADORES
 ========================= */
@@ -129,7 +125,6 @@ body {
     gap: 10px;
     margin-top: 20px;
 }
-
 /* =========================
    TARJETAS
 ========================= */
@@ -159,7 +154,6 @@ body {
     color: #777;
     font-size: 0.9rem;
 }
-
 /* =========================
    CONTACTO
 ========================= */
@@ -167,7 +161,6 @@ body {
     background: #1e90ff;
     color: white;
 }
-
 /* =========================
    FOOTER
 ========================= */
@@ -176,4 +169,66 @@ footer {
     color: white;
     text-align: center;
     padding: 15px;
+}
+
+/* =========================
+   RESPONSIVE (CELULAR)
+========================= */
+@media (max-width: 768px) {
+
+    /* Header */
+    .header-content {
+        flex-direction: column; /* logo arriba, texto abajo */
+        gap: 5px;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    .header h1 {
+        font-size: 1.2rem;
+    }
+
+    /* Navbar */
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        top: 70px;
+    }
+
+    .nav a {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Hero */
+    .hero {
+        height: auto;
+        padding: 40px 20px;
+        background-size: 100%; /* mejor ajuste en móvil */
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* Grid jugadores */
+    .grid {
+        grid-template-columns: 1fr; /* 🔥 una sola columna */
+    }
+
+    .card img {
+        height: 200px;
+    }
+
+    /* Body ajuste */
+    body {
+        padding-top: 180px;
+    }
 }
