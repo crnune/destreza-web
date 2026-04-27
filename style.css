@@ -95,7 +95,7 @@ body {
 }
 
 .hero h2 {
-    font-size: 3rem;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
@@ -142,7 +142,7 @@ body {
 
 .card img {
     width: 100%;
-    height: 300px;
+    height: 225px; /* más baja */
     object-fit: cover;
 }
 
@@ -170,6 +170,48 @@ footer {
     text-align: center;
     padding: 15px;
 }
+
+/* =========================
+   GALERÍA EQUIPO
+========================= */
+.galeria {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.galeria-grid img {
+    width: 80%;
+    aspect-ratio: 16/9;   /* 🔥 perfecto para fotos horizontales */
+    object-fit: cover;     llena sin deformar */
+    border-radius: 10px;*/
+}
+
+.card img {
+    width: 100%;
+    height: 225px; /* más baja */
+    object-fit: cover;
+}
+
+/*
+.galeria-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+}
+
+.galeria-grid img {
+    width: 40%;
+    aspect-ratio: 16/9;
+    object-fit: contain; /* 🔥 muestra toda la imagen */
+    /*background: #f5f7fa;    /* opcional para relleno */
+/*}*/
 
 /* =========================
    RESPONSIVE (CELULAR)
@@ -232,3 +274,5 @@ footer {
         padding-top: 180px;
     }
 }
+
+
