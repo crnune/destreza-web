@@ -13,7 +13,6 @@ body {
     color: #333;
     padding-top: 150px; /* espacio por header + nav fijo */
 }
-
 /* =========================
    HEADER
 ========================= */
@@ -91,17 +90,16 @@ body {
 ========================= */
 .hero {
     height: 90vh;
-
     background-image: url('img/Fondo.png');
     background-position: center;
-    background-size: 90%;
+    /*background-size: 100%;*/
+    background-size: contain; /* 🔥 muestra toda la imagen */
+    background-position: center top;
     background-repeat: no-repeat;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     text-align: center;
     color: white;
 }
@@ -271,6 +269,12 @@ footer {
         position: relative; /* 🔥 deja de ser fijo */
         top: 0;
     }
+ 
+    .nav a {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
 
     /*.nav {
         flex-direction: column;
@@ -278,19 +282,13 @@ footer {
         top: 70px;
     }*/
 
-    .nav a {
-        padding: 10px;
-        width: 100%;
-        text-align: center;
-    }
-
     /* Hero */
     .hero {
         height: auto;
         padding: 40px 20px;
         background-size: 100%; /* mejor ajuste en móvil */
-    }
-
+    }   
+    
     .hero h2 {
         font-size: 2rem;
     }
@@ -301,13 +299,25 @@ footer {
 
     /* Grid jugadores */
     .grid {
-        grid-template-columns: 1fr; /* 🔥 una sola columna */
+        /*grid-template-columns: 1fr; /* 🔥 una sola columna */
+        grid-template-columns: repeat(2, 1fr); /* 🔥 2 columnas */
+        gap: 10px;*/
     }
 
     .card img {
-        height: 200px;
+        height: 250px;
+    }
+
+    .card h3 {
+        font-size: 0.9rem;
+    }
+
+    .card span {
+        font-size: 0.75rem;
+    }
+
+    .card {
+        border-radius: 12px;
     }
 }
-
-
 
