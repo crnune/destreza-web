@@ -11,7 +11,7 @@
 <body>
     <header class="header">        
         <div class="container header-content">
-            <img src="img/DestrezaMarketing.jpg" alt="Logo" class="logo">
+            <img src="img/balon.png" class="balon" alt="Balón">
             <h1>Destreza Futsal - Costa Rica</h1>
         </div>
     </header>
@@ -20,6 +20,7 @@
         <a href="#inicio">Inicio</a>
         <a href="#jugadores">Jugadores</a>
         <a href="#contacto">Contacto</a>
+        <a href="#" id="btnHistoria">Historia del Club</a>
     </nav>
 
     <section id="inicio" class="hero">
@@ -32,7 +33,7 @@
             <h2>Nuestro Equipo DESTREZA</h2>
             <div class="grid">
                 <div class="card">
-                    <img src="img/dt.jpeg">
+                    <img src="img/dt.jpg">
                     <h3>Guillermo Avilés</h3>
                     <span>Director Técnico</span>
                 </div>
@@ -111,21 +112,6 @@
         </div>    
     </section>
 
-    <!--<section class="galeria">
-    <div class="container">
-        <h2>Galería del Equipo</h2>
-
-        <div class="galeria-grid">
-            <img src="img/equipo1.jpg" alt="">            
-            <img src="img/equipo2.jpg" alt="">
-            <img src="img/equipo3.jpg" alt="">
-            <img src="img/equipo4.jpg" alt="">
-            <img src="img/equipo5.jpg" alt="">
-            <img src="img/equipo6.jpg" alt="">
-        </div>
-    </div>
-    </section>-->
-
     <section id="galeria" class="section">
         <div class="container">
             <h2>Galería del Equipo</h2>
@@ -164,40 +150,6 @@
         </div>    
     </section>
 
-
-<!--<section id="jugadores" class="section">
-        <div class="container">
-            <h2>Fotos Partidos</h2>
-            <div class="grid">                
-                <div class="card">
-                    <img src="img/partido1.jpg">
-                    <h3>Sede San Carlos</h3> 
-                    <span>Año 2026</span>                   
-                </div> 
-                <div class="card">
-                    <img src="img/partido2.jpg">
-                    <h3>Sede Siquirres</h3> 
-                    <span>Año 2026</span>                   
-                </div>
-                <div class="card">
-                    <img src="img/partido3.jpg">
-                    <h3>Sede Tennis Club</h3>    
-                    <span>Año 2026</span>                
-                </div>
-                <div class="card">
-                    <img src="img/partido4.jpg">
-                    <h3>Sede Tennis Club</h3>  
-                    <span>Año 2026</span>                  
-                </div>
-                <div class="card">
-                    <img src="img/partido5.jpg">
-                    <h3>Sede Siquirres</h3>   
-                    <span>Año 2025</span>                 
-                </div>                              
-            </div>
-        </div>    
-    </section>-->
-
     <section id="contacto" class="section contacto">
         <h2>Contacto</h2>
         <p>Email: destrezafutsal@gmail.com</p>
@@ -207,6 +159,42 @@
     <footer>
         <p>&copy; 2026 Destreza Futsal - Costa Rica</p>
     </footer>
+
+    <!-- MODAL HISTORIA -->
+    <div id="modalHistoria" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar">&times;</span>
+            <h2>Historia del Club</h2>
+            <p>
+                El Destreza Futsal nace con el objetivo de impulsar el talento local,
+                promoviendo valores como disciplina, trabajo en equipo y pasión por el futsala.
+                A lo largo de los años, el club ha participado en diferentes torneos
+                y ha formado jugadores comprometidos con el deporte y la comunidad.
+                Su propietario y fundador es el señor Luis Diego Campos.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const btnHistoria = document.getElementById("btnHistoria");
+        const modal = document.getElementById("modalHistoria");
+        const cerrar = document.querySelector(".cerrar");
+
+        btnHistoria.addEventListener("click", (e) => {
+            e.preventDefault();
+            modal.style.display = "block";
+        });
+
+        cerrar.addEventListener("click", () => {
+            modal.style.display = "none";
+        });
+
+        window.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    </script>
 
 </body>
 </html>
