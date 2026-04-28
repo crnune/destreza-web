@@ -22,17 +22,17 @@ body {
     background: white;
     padding: 10px 0;
     text-align: center;
-
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /*como un sombreado*/
 }
 
 .balon {
-    width: 75px;
-    height: auto;
+    width: 65px;
+    transition: transform 0.3s ease;
 }
 
 .balon:hover {
@@ -48,11 +48,15 @@ body {
     align-items: center;
     justify-content: center;
     gap: 15px;
+    padding: 10px 0;
 }
 
 .header h1 {
-    font-size: 1.8rem;
-    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: hwb(40 13% 32%);
+    text-transform: uppercase;
 }
 
 .logo {
@@ -82,9 +86,25 @@ body {
     text-align: center;
 }
 
-.nav a:hover {
-    background: yellow;
+.nav a {
+    position: relative;
 }
+
+.nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 0;
+    height: 2px;
+    background: #1e90ff;
+    transition: 0.3s;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
 /* =========================
    HERO (INICIO)
 ========================= */
@@ -168,9 +188,12 @@ body {
    CONTACTO
 ========================= */
 .contacto {
-    background: #1e90ff;
+    background: hwb(40 13% 32%);
     color: white;
+    font-size: 15px;
+    color: black;
 }
+
 /* =========================
    FOOTER
 ========================= */
@@ -241,6 +264,15 @@ footer {
     cursor: pointer;
 }
 
+.whatsapp {
+    display: inline-block;
+    background: #25D366;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
 /* =========================
    RESPONSIVE (CELULAR)
 ========================= */
@@ -268,6 +300,10 @@ footer {
         .nav {
         position: relative; /* 🔥 deja de ser fijo */
         top: 0;
+    }
+
+    .balon {
+        width: 45px;
     }
  
     .nav a {
